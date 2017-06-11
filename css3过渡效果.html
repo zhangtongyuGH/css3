@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Insert a title</title>
+    <meta charset="utf-8">
+    <style>
+      #d1{
+        width:200px;
+        height:200px;
+        border:2px solid #333;
+        background-color:#E4393C;
+        /*此处声明过渡：管去管回*/
+        /*增加过渡*/
+        /*1、指定属性(必须的)*/
+        transition-property:background,border-radius;
+        /*2、指定时长(必须的)*/
+        transition-duration:2s;
+        /*3、指定速度时间速率*/
+        transition-timing-function:linear;
+        /*4、指定延迟*/
+        /*transition-delay:5s;*/
+      }
+      #d1:hover{
+        background-color:#005aa0;
+        border-radius:50%;
+        /*此处声明过渡：只管去不管回*/
+      }
+      
+      #scroll{
+        width:50px;
+        height:50px;
+        background-color:#e4393c;
+        border:2px solid #005aa0;
+        text-align:center;
+        line-height:50px;
+        border-radius:50%;
+        font-weight:bold;
+        font-size:24px;
+        color:#fff;
+        transition:transform 3s;
+      }
+      #scroll:hover{
+        transform:translate(500px) rotate(1080deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="scroll">滚</div>
+    <div id="d1"></div>
+  </body>
+</html>
