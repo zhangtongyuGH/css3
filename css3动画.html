@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Insert a title</title>
+    <meta charset="utf-8">
+    <style>
+      #d1{
+        width:200px;
+        height:200px;
+        border:1px solid #333;
+
+        /*动画 ：简写方式*/
+        animation:change 5s linear infinite alternate;
+        -webkit-animation:change 5s linear infinite alternate;
+
+        animation-fill-mode:backwards;
+        -webkit-animation-fill-mode:backwards;
+      }
+
+      #d1:hover{
+        /*animation-name:change;
+        animation-duration:5s;
+        animation-timing-function:linear;
+        animation-iteration-count:infinite;
+        animation-direction:alternate;
+
+        -webkit-animation-name:change;
+        -webkit-animation-duration:5s;
+        -webkit-animation-timing-function:linear;
+        -webkit-animation-iteration-count:infinite;
+        -webkit-animation-direction:alternate;*/
+
+
+        /*鼠标移入时，则暂停动画*/
+        animation-play-state:paused;
+        -webkit-animation-play-state:paused;
+      }
+      /*
+        声明动画 change
+        1、状态1(关键帧1) 
+          动画开始的时候，左外边距 为0，上外边距为0 ， 背景颜色 为 blue
+        2、状态2(关键帧2) 
+          动画运行到25%，左外边距 为200，上外边距为0 ， 背景颜色 为 yellow
+        3、状态3(关键帧3) 
+          动画运行到一半的时候(50%)，左外边距 为200，上外边距为200 ， 背景颜色 为 red
+        4、状态4(关键帧4) 
+          动画运行到3/4时(75%)，左外边距 为0，上外边距为200 ， 背景颜色 为 green
+        5、状态5(关键帧5) 
+          动画结束的时候，左外边距 为0，上外边距为0 ， 背景颜色 为 blue
+      */
+      @keyframes change{
+        /*状态1*/
+        0%{
+          margin-left:0px;
+          margin-top:0px;
+          background-color:blue;
+        }
+        /*状态2*/
+        25%{
+          margin-left:200px;
+          margin-top:0px;
+          background-color:yellow;
+        }
+        /*状态3*/
+        50%{
+          margin-left:200px;
+          margin-top:200px;
+          background-color:red;
+        }
+        /*状态4*/
+        75%{
+          margin-left:0px;
+          margin-top:200px;
+          background-color:green;
+        }
+        /*状态5*/
+        100%{
+          margin-left:0px;
+          margin-top:0px;
+          background-color:blue;
+        }
+      }
+
+      @-webkit-keyframes change{
+        /*状态1*/
+        0%{
+          margin-left:0px;
+          margin-top:0px;
+          background-color:blue;
+        }
+        /*状态2*/
+        25%{
+          margin-left:200px;
+          margin-top:0px;
+          background-color:yellow;
+        }
+        /*状态3*/
+        50%{
+          margin-left:200px;
+          margin-top:200px;
+          background-color:red;
+        }
+        /*状态4*/
+        75%{
+          margin-left:0px;
+          margin-top:200px;
+          background-color:green;
+        }
+        /*状态5*/
+        100%{
+          margin-left:0px;
+          margin-top:0px;
+          background-color:blue;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="d1"></div>
+  </body>
+</html>
